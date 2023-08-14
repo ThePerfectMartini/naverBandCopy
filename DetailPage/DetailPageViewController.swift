@@ -1,8 +1,6 @@
-
-
 import UIKit
 
-class ViewController: UIViewController {
+class DetailPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,5 +9,4 @@ class ViewController: UIViewController {
 
 
 }
-
 

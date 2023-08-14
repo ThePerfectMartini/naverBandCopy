@@ -13,6 +13,15 @@
 		272488C72A89CB1500572023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488C52A89CB1500572023 /* Main.storyboard */; };
 		272488C92A89CB1500572023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 272488C82A89CB1500572023 /* Assets.xcassets */; };
 		272488CC2A89CB1500572023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488CA2A89CB1500572023 /* LaunchScreen.storyboard */; };
+		272488D42A89CBCC00572023 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488D32A89CBCC00572023 /* Data.swift */; };
+		272488D62A89DAE600572023 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488D52A89DAE600572023 /* HomeViewController.swift */; };
+		272488D92A89DB0100572023 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488D82A89DB0100572023 /* HomeStoryboard.storyboard */; };
+		272488DC2A89DB3400572023 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488DB2A89DB3400572023 /* MyPageViewController.swift */; };
+		272488DE2A89DB4100572023 /* MyPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488DD2A89DB4100572023 /* MyPageStoryboard.storyboard */; };
+		272488E12A89DB5A00572023 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488E02A89DB5A00572023 /* DetailPageViewController.swift */; };
+		272488E32A89DB6700572023 /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */; };
+		272488E62A89DB8500572023 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488E52A89DB8500572023 /* ChatViewController.swift */; };
+		272488E82A89DB8B00572023 /* ChatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		272488C82A89CB1500572023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		272488CB2A89CB1500572023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		272488CD2A89CB1500572023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272488D32A89CBCC00572023 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		272488D52A89DAE600572023 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		272488D82A89DB0100572023 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		272488DB2A89DB3400572023 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		272488DD2A89DB4100572023 /* MyPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageStoryboard.storyboard; sourceTree = "<group>"; };
+		272488E02A89DB5A00572023 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
+		272488E52A89DB8500572023 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,10 @@
 		272488B32A89CB1500572023 = {
 			isa = PBXGroup;
 			children = (
+				272488D72A89DAF200572023 /* Home */,
+				272488DF2A89DB4800572023 /* DetailPage */,
+				272488DA2A89DB2400572023 /* MyPage */,
+				272488E42A89DB7700572023 /* Chat */,
 				272488BE2A89CB1500572023 /* naverBandCopy */,
 				272488BD2A89CB1500572023 /* Products */,
 			);
@@ -59,12 +81,49 @@
 				272488BF2A89CB1500572023 /* AppDelegate.swift */,
 				272488C12A89CB1500572023 /* SceneDelegate.swift */,
 				272488C32A89CB1500572023 /* ViewController.swift */,
+				272488D32A89CBCC00572023 /* Data.swift */,
 				272488C52A89CB1500572023 /* Main.storyboard */,
 				272488C82A89CB1500572023 /* Assets.xcassets */,
 				272488CA2A89CB1500572023 /* LaunchScreen.storyboard */,
 				272488CD2A89CB1500572023 /* Info.plist */,
 			);
 			path = naverBandCopy;
+			sourceTree = "<group>";
+		};
+		272488D72A89DAF200572023 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				272488D52A89DAE600572023 /* HomeViewController.swift */,
+				272488D82A89DB0100572023 /* HomeStoryboard.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		272488DA2A89DB2400572023 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				272488DB2A89DB3400572023 /* MyPageViewController.swift */,
+				272488DD2A89DB4100572023 /* MyPageStoryboard.storyboard */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		272488DF2A89DB4800572023 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				272488E02A89DB5A00572023 /* DetailPageViewController.swift */,
+				272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */,
+			);
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		272488E42A89DB7700572023 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				272488E52A89DB8500572023 /* ChatViewController.swift */,
+				272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				272488CC2A89CB1500572023 /* LaunchScreen.storyboard in Resources */,
+				272488DE2A89DB4100572023 /* MyPageStoryboard.storyboard in Resources */,
 				272488C92A89CB1500572023 /* Assets.xcassets in Resources */,
+				272488D92A89DB0100572023 /* HomeStoryboard.storyboard in Resources */,
 				272488C72A89CB1500572023 /* Main.storyboard in Resources */,
+				272488E32A89DB6700572023 /* DetailPageStoryboard.storyboard in Resources */,
+				272488E82A89DB8B00572023 /* ChatStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272488D62A89DAE600572023 /* HomeViewController.swift in Sources */,
+				272488DC2A89DB3400572023 /* MyPageViewController.swift in Sources */,
+				272488E62A89DB8500572023 /* ChatViewController.swift in Sources */,
 				272488C42A89CB1500572023 /* ViewController.swift in Sources */,
 				272488C02A89CB1500572023 /* AppDelegate.swift in Sources */,
+				272488E12A89DB5A00572023 /* DetailPageViewController.swift in Sources */,
 				272488C22A89CB1500572023 /* SceneDelegate.swift in Sources */,
+				272488D42A89CBCC00572023 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +362,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +370,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rhd9228.naverBandCopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,6 +393,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +401,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rhd9228.naverBandCopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
