@@ -48,7 +48,6 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDetail", sender: nil)
-        print("asdasd")
     }
     
     

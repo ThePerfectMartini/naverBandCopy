@@ -25,10 +25,13 @@ class ChatDetailController: UIViewController {
             
         }else{
             chatRoomList[chatIndex].chatList.append(["0",inputTextField.text ?? ""])
+            chatTableView.reloadData()
+
             let index = IndexPath(row: chatRoomList[chatIndex].chatList.count-1, section: 0)
             
-            chatTableView.reloadData()
             chatTableView.scrollToRow(at: index, at: .bottom, animated: true)
+            view.keyboardLayoutGuide.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            
             inputTextField.text = ""
         }
         
@@ -38,7 +41,7 @@ class ChatDetailController: UIViewController {
         super.viewDidLoad()
         chatTableView.dataSource = self
         chatTableView.register(UINib(nibName: "ChatDetailCell", bundle: nil), forCellReuseIdentifier: "ChatDetailCell")
-        
+        chatTableView.delegate = self
 
         DispatchQueue.main.async {
             let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
@@ -51,9 +54,10 @@ class ChatDetailController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
+
+
+    
+    
     deinit{
         print("deinitial")
     }
@@ -71,12 +75,10 @@ extension ChatDetailController: UITableViewDelegate{
 extension ChatDetailController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(IndexPath(row: chatRoomList[chatIndex].chatList.count-1, section: 0),"셀 갯수")
         return chatRoomList[chatIndex].chatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(IndexPath(row: chatRoomList[chatIndex].chatList.count-1, section: 0),"cell생성")
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "ChatDetailCell", for: indexPath) as! ChatDetailCell
         cell.chatContent.text = chatRoomList[chatIndex].chatList[indexPath.row][1]
         if chatRoomList[chatIndex].chatList[indexPath.row][0] == "0" {
@@ -95,5 +97,19 @@ extension ChatDetailController: UITableViewDataSource{
         
     }
     
+
+}
+
+
+extension ChatDetailController: UIScrollViewDelegate{
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let position = scrollView.contentOffset.y
+        let offSetMatch = chatTableView.contentSize.height - scrollView.frame.size.height
+        print("화면 끝 : \(position)")
+        if position > offSetMatch {
+            print("인식")
+        }
+    }
 }
