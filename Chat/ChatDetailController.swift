@@ -9,12 +9,9 @@ import UIKit
 
 
 class ChatDetailController: UIViewController {
-    
     var chatIndex:Int = 0
     
-    
-
-    
+        
     @IBOutlet weak var chatTableView: UITableView!
     
     @IBOutlet weak var inputTextField: UITextField!
@@ -22,7 +19,7 @@ class ChatDetailController: UIViewController {
     @IBAction func inputButton(_ sender:Any) {
         
         if inputTextField.text == "" {
-            
+            view.endEditing(true)
         }else{
             chatRoomList[chatIndex].chatList.append(["0",inputTextField.text ?? ""])
             chatTableView.reloadData()
@@ -30,7 +27,6 @@ class ChatDetailController: UIViewController {
             let index = IndexPath(row: chatRoomList[chatIndex].chatList.count-1, section: 0)
             
             chatTableView.scrollToRow(at: index, at: .bottom, animated: true)
-            view.keyboardLayoutGuide.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             
             inputTextField.text = ""
         }
@@ -42,7 +38,10 @@ class ChatDetailController: UIViewController {
         chatTableView.dataSource = self
         chatTableView.register(UINib(nibName: "ChatDetailCell", bundle: nil), forCellReuseIdentifier: "ChatDetailCell")
         chatTableView.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboard), name:UIResponder.keyboardWillChangeFrameNotification, object: nil)
 
+        
         DispatchQueue.main.async {
             let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
 
@@ -50,12 +49,17 @@ class ChatDetailController: UIViewController {
         }
     }
     
+    @objc func keyboard(notification: Notification){
+        let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
+
+        self.chatTableView.scrollToRow(at: index, at: .bottom, animated: false)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-
-
+    
     
     
     deinit{
@@ -104,12 +108,14 @@ extension ChatDetailController: UITableViewDataSource{
 extension ChatDetailController: UIScrollViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         let position = scrollView.contentOffset.y
         let offSetMatch = chatTableView.contentSize.height - scrollView.frame.size.height
         print("화면 끝 : \(position)")
         if position > offSetMatch {
-            print("인식")
+            print("화면 끝 도달")
         }
+        
     }
+    
+
 }

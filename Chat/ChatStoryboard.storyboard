@@ -48,17 +48,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-qk-LkX">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="777"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-qk-LkX">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="747.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyZ-hZ-H19">
-                                <rect key="frame" x="20" y="787.66666666666663" width="289" height="34"/>
+                                <rect key="frame" x="20" y="768" width="279" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCx-OQ-r7R">
-                                <rect key="frame" x="319" y="787" width="54" height="35"/>
+                                <rect key="frame" x="319" y="767.66666666666663" width="54" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="입력"/>
                                 <connections>
@@ -67,17 +67,18 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MHx-Ae-ZEO"/>
+                        <keyboardLayoutGuide key="keyboard" id="A1N-oa-8BJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nyZ-hZ-H19" firstAttribute="centerY" secondItem="hCx-OQ-r7R" secondAttribute="centerY" id="5dE-it-alI"/>
-                            <constraint firstItem="8D4-qk-LkX" firstAttribute="leading" secondItem="MHx-Ae-ZEO" secondAttribute="leading" id="JXy-0h-2ai"/>
-                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="leading" secondItem="nyZ-hZ-H19" secondAttribute="trailing" constant="10" id="L2g-ps-dQD"/>
-                            <constraint firstItem="MHx-Ae-ZEO" firstAttribute="trailing" secondItem="hCx-OQ-r7R" secondAttribute="trailing" constant="20" id="M50-ta-QpO"/>
-                            <constraint firstItem="nyZ-hZ-H19" firstAttribute="leading" secondItem="MHx-Ae-ZEO" secondAttribute="leading" constant="20" id="ZXT-Qc-Vga"/>
-                            <constraint firstItem="8D4-qk-LkX" firstAttribute="top" secondItem="MHx-Ae-ZEO" secondAttribute="top" id="ixE-sK-n7m"/>
-                            <constraint firstItem="MHx-Ae-ZEO" firstAttribute="bottom" secondItem="hCx-OQ-r7R" secondAttribute="bottom" constant="20" id="lZC-zv-LgK"/>
-                            <constraint firstItem="MHx-Ae-ZEO" firstAttribute="trailing" secondItem="8D4-qk-LkX" secondAttribute="trailing" id="uou-zA-3q5"/>
-                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="top" secondItem="8D4-qk-LkX" secondAttribute="bottom" constant="10" id="z9u-3u-Lip"/>
+                            <constraint firstItem="8D4-qk-LkX" firstAttribute="leading" secondItem="MHx-Ae-ZEO" secondAttribute="leading" id="Ex0-EI-hFK"/>
+                            <constraint firstItem="MHx-Ae-ZEO" firstAttribute="trailing" secondItem="hCx-OQ-r7R" secondAttribute="trailing" constant="20" id="J4a-dM-sCN"/>
+                            <constraint firstItem="A1N-oa-8BJ" firstAttribute="top" secondItem="nyZ-hZ-H19" secondAttribute="bottom" constant="40" id="MUB-iw-GFo"/>
+                            <constraint firstItem="8D4-qk-LkX" firstAttribute="trailing" secondItem="MHx-Ae-ZEO" secondAttribute="trailing" id="VD3-Iu-9VR"/>
+                            <constraint firstItem="8D4-qk-LkX" firstAttribute="top" secondItem="MHx-Ae-ZEO" secondAttribute="top" id="ley-Cq-DDO"/>
+                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="top" secondItem="8D4-qk-LkX" secondAttribute="bottom" constant="20" id="mUF-wW-MBE"/>
+                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="leading" secondItem="nyZ-hZ-H19" secondAttribute="trailing" constant="20" id="mj6-C1-i1k"/>
+                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="centerY" secondItem="nyZ-hZ-H19" secondAttribute="centerY" id="nPE-bQ-uOR"/>
+                            <constraint firstItem="nyZ-hZ-H19" firstAttribute="leading" secondItem="MHx-Ae-ZEO" secondAttribute="leading" constant="20" id="qSY-JZ-xOP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y6t-pe-oRy"/>
