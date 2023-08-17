@@ -27,6 +27,7 @@
 		272488EF2A8A02A400572023 /* ChatDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488EE2A8A02A400572023 /* ChatDetailController.swift */; };
 		272488F52A8A035D00572023 /* ChatDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488F32A8A035D00572023 /* ChatDetailCell.swift */; };
 		272488F62A8A035D00572023 /* ChatDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272488F42A8A035D00572023 /* ChatDetailCell.xib */; };
+		2726E54F2A8DAB750077ED14 /* LabelDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726E54E2A8DAB750077ED14 /* LabelDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		272488EE2A8A02A400572023 /* ChatDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailController.swift; sourceTree = "<group>"; };
 		272488F32A8A035D00572023 /* ChatDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailCell.swift; sourceTree = "<group>"; };
 		272488F42A8A035D00572023 /* ChatDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailCell.xib; sourceTree = "<group>"; };
+		2726E54E2A8DAB750077ED14 /* LabelDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */,
 				272488F02A8A032F00572023 /* ChatDetailCell */,
 				272488ED2A89F6CD00572023 /* ChatTableViewCell */,
+				2726E54E2A8DAB750077ED14 /* LabelDesign.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				272488EB2A89F6C700572023 /* ChatTableViewCell.swift in Sources */,
 				272488C42A89CB1500572023 /* ViewController.swift in Sources */,
 				272488EF2A8A02A400572023 /* ChatDetailController.swift in Sources */,
+				2726E54F2A8DAB750077ED14 /* LabelDesign.swift in Sources */,
 				272488C02A89CB1500572023 /* AppDelegate.swift in Sources */,
 				272488F52A8A035D00572023 /* ChatDetailCell.swift in Sources */,
 				272488E12A89DB5A00572023 /* DetailPageViewController.swift in Sources */,

@@ -11,7 +11,10 @@ import UIKit
 class ChatDetailController: UIViewController {
     var chatIndex:Int = 0
     
-        
+    @IBAction func tabRecog(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     @IBOutlet weak var chatTableView: UITableView!
     
     @IBOutlet weak var inputTextField: UITextField!
@@ -39,20 +42,23 @@ class ChatDetailController: UIViewController {
         chatTableView.register(UINib(nibName: "ChatDetailCell", bundle: nil), forCellReuseIdentifier: "ChatDetailCell")
         chatTableView.delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboard), name:UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboard), name:UIResponder.keyboardWillShowNotification, object: nil)
 
         
         DispatchQueue.main.async {
             let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
 
             self.chatTableView.scrollToRow(at: index, at: .bottom, animated: false)
+            print("맨밑으로 스크롤 애니메이션")
         }
     }
     
     @objc func keyboard(notification: Notification){
+        print("\(notification.name)")
         let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
 
         self.chatTableView.scrollToRow(at: index, at: .bottom, animated: false)
+        print("키보드 내려감")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,6 +99,8 @@ extension ChatDetailController: UITableViewDataSource{
             cell.chatPerson.text = chatRoomList[chatIndex].you
             cell.chatPerson.textAlignment = .left
             cell.chatContent.textAlignment = .left
+
+            
         }
         
         cell.chatContent.text = chatRoomList[0].chatList[indexPath.row][1]
@@ -110,7 +118,6 @@ extension ChatDetailController: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         let offSetMatch = chatTableView.contentSize.height - scrollView.frame.size.height
-        print("화면 끝 : \(position)")
         if position > offSetMatch {
             print("화면 끝 도달")
         }
