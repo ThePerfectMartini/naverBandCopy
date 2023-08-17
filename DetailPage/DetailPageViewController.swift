@@ -26,6 +26,7 @@ class DetailPageViewController: UIViewController{
         Writer.layer.borderWidth = 1
         DetailContent.layer.borderColor = UIColor.black.cgColor
         DetailContent.layer.borderWidth = 1
+        
     }
 }
 
