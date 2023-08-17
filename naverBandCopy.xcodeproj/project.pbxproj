@@ -22,6 +22,8 @@
 		272488E32A89DB6700572023 /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */; };
 		272488E62A89DB8500572023 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488E52A89DB8500572023 /* ChatViewController.swift */; };
 		272488E82A89DB8B00572023 /* ChatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */; };
+		E787EF092A8A35170009F56A /* ModifyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787EF082A8A35170009F56A /* ModifyPageViewController.swift */; };
+		E787EF0B2A8A427A0009F56A /* Detail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787EF0A2A8A427A0009F56A /* Detail.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
 		272488E52A89DB8500572023 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatStoryboard.storyboard; sourceTree = "<group>"; };
+		E787EF082A8A35170009F56A /* ModifyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyPageViewController.swift; sourceTree = "<group>"; };
+		E787EF0A2A8A427A0009F56A /* Detail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Detail.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				272488E02A89DB5A00572023 /* DetailPageViewController.swift */,
+				E787EF082A8A35170009F56A /* ModifyPageViewController.swift */,
 				272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */,
+				E787EF0A2A8A427A0009F56A /* Detail.xcassets */,
 			);
 			path = DetailPage;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 				272488D92A89DB0100572023 /* HomeStoryboard.storyboard in Resources */,
 				272488C72A89CB1500572023 /* Main.storyboard in Resources */,
 				272488E32A89DB6700572023 /* DetailPageStoryboard.storyboard in Resources */,
+				E787EF0B2A8A427A0009F56A /* Detail.xcassets in Resources */,
 				272488E82A89DB8B00572023 /* ChatStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +213,7 @@
 				272488E62A89DB8500572023 /* ChatViewController.swift in Sources */,
 				272488C42A89CB1500572023 /* ViewController.swift in Sources */,
 				272488C02A89CB1500572023 /* AppDelegate.swift in Sources */,
+				E787EF092A8A35170009F56A /* ModifyPageViewController.swift in Sources */,
 				272488E12A89DB5A00572023 /* DetailPageViewController.swift in Sources */,
 				272488C22A89CB1500572023 /* SceneDelegate.swift in Sources */,
 				272488D42A89CBCC00572023 /* Data.swift in Sources */,
