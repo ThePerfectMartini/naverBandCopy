@@ -22,6 +22,9 @@
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="검색"/>
+                                <connections>
+                                    <action selector="test:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="drr-Ak-c9a"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZc-UK-sDt">
                                 <rect key="frame" x="0.0" y="45" width="393" height="49"/>
@@ -59,13 +62,17 @@
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" placeholder="밴드,게시글을 검색해 보세요" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-3j-otV">
-                                <rect key="frame" x="5" y="94" width="319" height="56"/>
+                                <rect key="frame" x="5" y="93.666666666666671" width="319" height="56.000000000000014"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="q1j-av-mhs"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HTK-jz-D2R">
+                                <rect key="frame" x="0.0" y="149.66666666666669" width="393" height="668.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -76,9 +83,13 @@
                             <constraint firstAttribute="trailing" secondItem="FZc-UK-sDt" secondAttribute="trailing" id="MfA-O6-MOB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jxq-MP-vjP" secondAttribute="trailing" constant="5" id="NUn-OW-NFt"/>
                             <constraint firstItem="gnM-3j-otV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="QDD-GV-Mh1"/>
+                            <constraint firstItem="HTK-jz-D2R" firstAttribute="top" secondItem="gnM-3j-otV" secondAttribute="bottom" id="VQR-Wj-nUv"/>
                             <constraint firstItem="jxq-MP-vjP" firstAttribute="top" secondItem="FZc-UK-sDt" secondAttribute="bottom" constant="10" id="X9c-Zx-kmb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HTK-jz-D2R" secondAttribute="bottom" id="f6a-mZ-etr"/>
                             <constraint firstItem="FZc-UK-sDt" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jwp-Ly-EWW"/>
+                            <constraint firstItem="HTK-jz-D2R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pnt-Db-cyh"/>
                             <constraint firstItem="FZc-UK-sDt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="45" id="vx5-IB-1Gk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HTK-jz-D2R" secondAttribute="trailing" id="y9R-8D-UCN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -86,14 +97,23 @@
                         <outlet property="newJoin" destination="PbG-9N-1Pw" id="ekd-6g-Ed6"/>
                         <outlet property="search" destination="jxq-MP-vjP" id="hLr-4m-YjI"/>
                         <outlet property="searchBar" destination="gnM-3j-otV" id="diT-01-Vrf"/>
+                        <outlet property="tableView" destination="HTK-jz-D2R" id="kw1-nE-cxo"/>
+                        <segue destination="Bpw-0a-YSZ" kind="show" identifier="toDetail" id="mc4-LB-NL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
-
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
-
+        </scene>
+        <!--DetailPage-->
+        <scene sceneID="eGE-Zx-yQQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailPageStoryboard" referencedIdentifier="DetailPage" id="Bpw-0a-YSZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8uQ-HS-ehP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7p-ik-3cF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="-54"/>
         </scene>
     </scenes>
     <resources>

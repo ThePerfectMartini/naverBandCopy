@@ -11,27 +11,27 @@ import UIKit
 class ChatDetailController: UIViewController {
     var chatIndex:Int = 0
     
+    @IBOutlet weak var textView: UITextView!
+    
     @IBAction func tabRecog(_ sender: Any) {
         view.endEditing(true)
     }
     
     @IBOutlet weak var chatTableView: UITableView!
     
-    @IBOutlet weak var inputTextField: UITextField!
-    
     @IBAction func inputButton(_ sender:Any) {
         
-        if inputTextField.text == "" {
+        if textView.text == "" {
             view.endEditing(true)
         }else{
-            chatRoomList[chatIndex].chatList.append(["0",inputTextField.text ?? ""])
+            chatRoomList[chatIndex].chatList.append(["0",textView.text ?? ""])
             chatTableView.reloadData()
 
             let index = IndexPath(row: chatRoomList[chatIndex].chatList.count-1, section: 0)
             
             chatTableView.scrollToRow(at: index, at: .bottom, animated: true)
             
-            inputTextField.text = ""
+            textView.text = ""
         }
         
     }
@@ -91,20 +91,19 @@ extension ChatDetailController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "ChatDetailCell", for: indexPath) as! ChatDetailCell
         cell.chatContent.text = chatRoomList[chatIndex].chatList[indexPath.row][1]
+        cell.chatContentRight.text = chatRoomList[chatIndex].chatList[indexPath.row][1]
         if chatRoomList[chatIndex].chatList[indexPath.row][0] == "0" {
             cell.chatPerson.text = chatRoomList[chatIndex].me
             cell.chatPerson.textAlignment = .right
-            cell.chatContent.textAlignment = .right
+            cell.chatContent.isHidden = true
+            cell.chatContentRight.isHidden = false
         }else{
             cell.chatPerson.text = chatRoomList[chatIndex].you
             cell.chatPerson.textAlignment = .left
-            cell.chatContent.textAlignment = .left
+            cell.chatContentRight.isHidden = true
+            cell.chatContent.isHidden = false
 
-            
         }
-        
-        cell.chatContent.text = chatRoomList[0].chatList[indexPath.row][1]
-        
         return cell
         
     }
@@ -126,3 +125,6 @@ extension ChatDetailController: UIScrollViewDelegate{
     
 
 }
+
+
+
