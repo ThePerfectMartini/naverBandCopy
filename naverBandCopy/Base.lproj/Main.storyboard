@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gM-ba-8mt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4295" y="-163"/>
+            <point key="canvasLocation" x="-4302" y="-163"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oID-co-sVP">
@@ -30,6 +30,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="f4l-jS-Ohz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIV-w7-ip7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -52,7 +53,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnm-d0-nH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2548" y="-246"/>
+            <point key="canvasLocation" x="-2557" y="-259"/>
         </scene>
         <!--DetailPage-->
         <scene sceneID="J77-LF-tc2">

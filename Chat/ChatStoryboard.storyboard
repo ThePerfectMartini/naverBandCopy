@@ -17,24 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-BK-gzb">
-                                <rect key="frame" x="178" y="415.66666666666669" width="37" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pnf-rJ-Irw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OnM-BK-gzb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="A1G-iB-j3z"/>
-                            <constraint firstItem="OnM-BK-gzb" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="RAv-qF-w5x"/>
+                            <constraint firstItem="pnf-rJ-Irw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5uD-0P-yVc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pnf-rJ-Irw" secondAttribute="bottom" id="7ot-Wp-2Po"/>
+                            <constraint firstItem="pnf-rJ-Irw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IHV-aN-8XV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pnf-rJ-Irw" secondAttribute="trailing" id="Sy6-9E-rHi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="pnf-rJ-Irw" id="Y6h-s4-a0J"/>
+                        <segue destination="vbz-Ku-hes" kind="show" identifier="toDetail" id="E6H-vz-63q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-2"/>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+        <!--채팅상세-->
+        <scene sceneID="frg-Ek-nd7">
+            <objects>
+                <viewController title="채팅상세" id="vbz-Ku-hes" customClass="ChatDetailController" customModule="naverBandCopy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u1Q-M7-if8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-qk-LkX">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="747.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyZ-hZ-H19">
+                                <rect key="frame" x="20" y="768" width="279" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCx-OQ-r7R">
+                                <rect key="frame" x="319" y="767.66666666666663" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="입력"/>
+                                <connections>
+                                    <action selector="inputButton:" destination="vbz-Ku-hes" eventType="touchUpInside" id="PON-Fa-dQH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MHx-Ae-ZEO"/>
+                        <keyboardLayoutGuide key="keyboard" id="A1N-oa-8BJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8D4-qk-LkX" firstAttribute="leading" secondItem="MHx-Ae-ZEO" secondAttribute="leading" id="Ex0-EI-hFK"/>
+                            <constraint firstItem="MHx-Ae-ZEO" firstAttribute="trailing" secondItem="hCx-OQ-r7R" secondAttribute="trailing" constant="20" id="J4a-dM-sCN"/>
+                            <constraint firstItem="A1N-oa-8BJ" firstAttribute="top" secondItem="nyZ-hZ-H19" secondAttribute="bottom" constant="40" id="MUB-iw-GFo"/>
+                            <constraint firstItem="8D4-qk-LkX" firstAttribute="trailing" secondItem="MHx-Ae-ZEO" secondAttribute="trailing" id="VD3-Iu-9VR"/>
+                            <constraint firstItem="8D4-qk-LkX" firstAttribute="top" secondItem="MHx-Ae-ZEO" secondAttribute="top" id="ley-Cq-DDO"/>
+                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="top" secondItem="8D4-qk-LkX" secondAttribute="bottom" constant="20" id="mUF-wW-MBE"/>
+                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="leading" secondItem="nyZ-hZ-H19" secondAttribute="trailing" constant="20" id="mj6-C1-i1k"/>
+                            <constraint firstItem="hCx-OQ-r7R" firstAttribute="centerY" secondItem="nyZ-hZ-H19" secondAttribute="centerY" id="nPE-bQ-uOR"/>
+                            <constraint firstItem="nyZ-hZ-H19" firstAttribute="leading" secondItem="MHx-Ae-ZEO" secondAttribute="leading" constant="20" id="qSY-JZ-xOP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y6t-pe-oRy"/>
+                    <connections>
+                        <outlet property="chatTableView" destination="8D4-qk-LkX" id="hoq-dR-hVO"/>
+                        <outlet property="inputTextField" destination="nyZ-hZ-H19" id="3bf-c4-7QY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VT0-cC-cge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.51908396946567" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
