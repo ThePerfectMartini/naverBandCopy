@@ -15,7 +15,22 @@ var profileList:[String:profile] = [
 
 var postList:[postContent] = [postContent(title:"제목",content:"내용",writer:"의적")]
 
-var chatRoomList:[chatRoom] = [chatRoom(me:"의적",you:"스승님",chatList:[:])]
+var chatRoomList:[chatRoom] = [
+    chatRoom(me:"의적",you:"스승님",
+             chatList:[
+                ["0","안녕하세요"],
+                ["1","안녕하신가"],
+                ["0","의적님의 말"],
+                ["1","ㅏㅓㅗ허ㅗ"],
+                ["1","ㅁㄴㅇㅁㄴㅇ"],
+                ["0","ㅂㅂㅂㅂㅂㅂ"],
+                ["0","ㅂㅂㅂㅂㅂㅂ"],
+                ["0","ㅂㅂㅂㅂㅂㅂ"],
+                ["0","ㅂㅂㅂㅂㅂㅂ"],
+                ["0","이글이안보이면한칸위에"],
+             ]
+            )
+]
 
 
 struct postContent {
@@ -35,6 +50,6 @@ struct chatRoom {
     var me:String
     var you:String
     
-    var chatList:[Bool:String] = [:]
+    var chatList:[[String]]
     
 }
