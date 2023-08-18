@@ -22,17 +22,18 @@
 		272488E32A89DB6700572023 /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */; };
 		272488E62A89DB8500572023 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488E52A89DB8500572023 /* ChatViewController.swift */; };
 		272488E82A89DB8B00572023 /* ChatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */; };
-		6782FCDE2A8A19C10035C232 /* MyPageEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6782FCDD2A8A19C10035C232 /* MyPageEditViewController.swift */; };
-		6782FCE02A8B548C0035C232 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6782FCDF2A8B548C0035C232 /* MypageModel.swift */; };
-		6782FCE52A8BA6750035C232 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6782FCE32A8BA6750035C232 /* TableViewCell.swift */; };
-		6782FCE62A8BA6750035C232 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6782FCE42A8BA6750035C232 /* TableViewCell.xib */; };
-		E787EF092A8A35170009F56A /* ModifyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787EF082A8A35170009F56A /* ModifyPageViewController.swift */; };
-		E787EF0B2A8A427A0009F56A /* Detail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787EF0A2A8A427A0009F56A /* Detail.xcassets */; };
 		272488EB2A89F6C700572023 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488E92A89F6C700572023 /* ChatTableViewCell.swift */; };
 		272488EC2A89F6C700572023 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272488EA2A89F6C700572023 /* ChatTableViewCell.xib */; };
 		272488EF2A8A02A400572023 /* ChatDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488EE2A8A02A400572023 /* ChatDetailController.swift */; };
 		272488F52A8A035D00572023 /* ChatDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272488F32A8A035D00572023 /* ChatDetailCell.swift */; };
 		272488F62A8A035D00572023 /* ChatDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272488F42A8A035D00572023 /* ChatDetailCell.xib */; };
+		6782FCDE2A8A19C10035C232 /* MyPageEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6782FCDD2A8A19C10035C232 /* MyPageEditViewController.swift */; };
+		6782FCE02A8B548C0035C232 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6782FCDF2A8B548C0035C232 /* MypageModel.swift */; };
+		6782FCE52A8BA6750035C232 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6782FCE32A8BA6750035C232 /* TableViewCell.swift */; };
+		6782FCE62A8BA6750035C232 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6782FCE42A8BA6750035C232 /* TableViewCell.xib */; };
+		7D84713E2A8EB7B10097E610 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84713D2A8EB7B10097E610 /* CustomTableViewCell.swift */; };
+		E787EF092A8A35170009F56A /* ModifyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787EF082A8A35170009F56A /* ModifyPageViewController.swift */; };
+		E787EF0B2A8A427A0009F56A /* Detail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787EF0A2A8A427A0009F56A /* Detail.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,17 +54,18 @@
 		272488E22A89DB6700572023 /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
 		272488E52A89DB8500572023 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		272488E72A89DB8B00572023 /* ChatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatStoryboard.storyboard; sourceTree = "<group>"; };
-		6782FCDD2A8A19C10035C232 /* MyPageEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageEditViewController.swift; sourceTree = "<group>"; };
-		6782FCDF2A8B548C0035C232 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
-		6782FCE32A8BA6750035C232 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		6782FCE42A8BA6750035C232 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		E787EF082A8A35170009F56A /* ModifyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyPageViewController.swift; sourceTree = "<group>"; };
-		E787EF0A2A8A427A0009F56A /* Detail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Detail.xcassets; sourceTree = "<group>"; };
 		272488E92A89F6C700572023 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		272488EA2A89F6C700572023 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		272488EE2A8A02A400572023 /* ChatDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailController.swift; sourceTree = "<group>"; };
 		272488F32A8A035D00572023 /* ChatDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailCell.swift; sourceTree = "<group>"; };
 		272488F42A8A035D00572023 /* ChatDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailCell.xib; sourceTree = "<group>"; };
+		6782FCDD2A8A19C10035C232 /* MyPageEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageEditViewController.swift; sourceTree = "<group>"; };
+		6782FCDF2A8B548C0035C232 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
+		6782FCE32A8BA6750035C232 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6782FCE42A8BA6750035C232 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		7D84713D2A8EB7B10097E610 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E787EF082A8A35170009F56A /* ModifyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyPageViewController.swift; sourceTree = "<group>"; };
+		E787EF0A2A8A427A0009F56A /* Detail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Detail.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				272488D52A89DAE600572023 /* HomeViewController.swift */,
 				272488D82A89DB0100572023 /* HomeStoryboard.storyboard */,
+				7D84713D2A8EB7B10097E610 /* CustomTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				6782FCE02A8B548C0035C232 /* MypageModel.swift in Sources */,
 				272488D62A89DAE600572023 /* HomeViewController.swift in Sources */,
+				7D84713E2A8EB7B10097E610 /* CustomTableViewCell.swift in Sources */,
 				272488DC2A89DB3400572023 /* MyPageViewController.swift in Sources */,
 				272488E62A89DB8500572023 /* ChatViewController.swift in Sources */,
 				272488EB2A89F6C700572023 /* ChatTableViewCell.swift in Sources */,
