@@ -19,6 +19,13 @@ var postList:[postContent] = [postContent(title:"건프라는 자유다!",conten
                               postContent(title:"<중밴>중국어영화대사 공부방",content:"중국어 고급반 중국어 최고수들 모임 중국어 자신있는 한국분, 중국분들 모임 중국영화",writer:"중국어능력자"),
                               postContent(title:"소리내어책읽기 말더듬극복 스피치",content:"말더듬을 다같이 극복해봅시다",writer:"말..더...듬...이"),
                               postContent(title:"글 쓰는 사람들",content:"우리 밴드는 문학을 좋아하는 사람들의 공간입니다. 시인, 수필가, 시조, 시인, 동시 작가, 소설 등",writer:"작가들"),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
+                              postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name),
                               postContent(title:"내 글 테스트",content:"이건 내가 쓴 글입니다 하하하",writer:profileList[0].name)
 ]
 
