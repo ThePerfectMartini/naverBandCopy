@@ -36,7 +36,7 @@ class MyPageEditViewController: UIViewController {
         editProfileImage.image = image
         editUserNickname.text = nickname
         editUserIntroduction.text = introduction
-
+        
         
         // (3) 기본값 1, 0 설정시 시스템이 지원하는 최대값으로 설정
         // 기본적으로 이미지, 라이브포토, 비디오와 같은 모든 에셋타입 표시
@@ -116,10 +116,10 @@ extension MyPageEditViewController: UITextFieldDelegate {
             self.editUserIntroduction.becomeFirstResponder()
             // 자기소개 텍스트필드에서 return키 누르면 save됨
         } else if textField == self.editUserIntroduction {
-               self.saveProfileButtonPressed(self.saveButton)
-           }
-           return true
-       }
+            self.saveProfileButtonPressed(self.saveButton)
+        }
+        return true
+    }
 }
 
 

@@ -19,14 +19,14 @@ class ChatDetailController: UIViewController {
     
     @IBOutlet weak var chatTableView: UITableView!
     
+    @IBOutlet weak var button: UIButton!
     @IBAction func inputButton(_ sender:Any) {
-        
         if textView.text == "" {
             view.endEditing(true)
         }else{
             chatRoomList[chatIndex].chatList.append(["0",textView.text ?? ""])
             chatTableView.reloadData()
-
+            
             let index = IndexPath(row: chatRoomList[chatIndex].chatList.count-1, section: 0)
             
             chatTableView.scrollToRow(at: index, at: .bottom, animated: true)
@@ -41,13 +41,14 @@ class ChatDetailController: UIViewController {
         chatTableView.dataSource = self
         chatTableView.register(UINib(nibName: "ChatDetailCell", bundle: nil), forCellReuseIdentifier: "ChatDetailCell")
         chatTableView.delegate = self
+        textView.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboard), name:UIResponder.keyboardWillShowNotification, object: nil)
-
+        
         
         DispatchQueue.main.async {
             let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
-
+            
             self.chatTableView.scrollToRow(at: index, at: .bottom, animated: false)
             print("맨밑으로 스크롤 애니메이션")
         }
@@ -56,7 +57,7 @@ class ChatDetailController: UIViewController {
     @objc func keyboard(notification: Notification){
         print("\(notification.name)")
         let index = IndexPath(row: chatRoomList[self.chatIndex].chatList.count-1, section: 0)
-
+        
         self.chatTableView.scrollToRow(at: index, at: .bottom, animated: false)
         print("키보드 내려감")
     }
@@ -66,7 +67,15 @@ class ChatDetailController: UIViewController {
         chatTableView.reloadData()
     }
     
+    //엔터키 감지
     
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            inputButton(textView)
+        } else {
+        }
+        return true
+    }
     
     
     deinit{
@@ -103,15 +112,17 @@ extension ChatDetailController: UITableViewDataSource{
             cell.chatPerson.textAlignment = .left
             cell.chatContentRight.isHidden = true
             cell.chatContent.isHidden = false
-
+            
         }
         return cell
         //x
         
     }
     
-
+    
 }
+
+
 
 
 extension ChatDetailController: UIScrollViewDelegate{
@@ -125,8 +136,11 @@ extension ChatDetailController: UIScrollViewDelegate{
         
     }
     
-
+    
 }
 
+extension ChatDetailController: UITextViewDelegate{
+    
+}
 
 

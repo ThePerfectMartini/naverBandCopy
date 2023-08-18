@@ -112,7 +112,7 @@ extension MyPageViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
         cell.postTitle.text = postList[indexPath.row].title
         cell.postContent.text = postList[indexPath.row].content
-        // cell.postImage.image =
+        cell.postImage.image = UIImage(named: "photo\(indexPath.row % 5 + 1)")
         return cell
     }
     
