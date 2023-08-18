@@ -8,9 +8,10 @@
 import UIKit
 
 class ModifyPageViewController: UIViewController {
-    let backgroundcolor = UIColor(red:255/255.0, green:255/255.0, blue:255/255.0, alpha: 1.0)
     @IBOutlet weak var ModifyTitle: UITextField!
-    @IBOutlet weak var ModifyContent: UITextField!
+    @IBOutlet weak var ModifyContent: UITextView!
+    @IBOutlet weak var doneButton: UIButton!
+    
     
     @IBAction func completeButton(_ sender: Any) {
         guard let index = index else {return}
@@ -30,8 +31,11 @@ class ModifyPageViewController: UIViewController {
         super.viewDidLoad()
         ModifyTitle.text = titleString
         ModifyContent.text = contentString
-        ModifyTitle.backgroundColor = backgroundcolor
-        ModifyContent.backgroundColor = backgroundcolor
+        setupButton(doneButton)
+        
+        ModifyContent.layer.cornerRadius = 10
+        ModifyContent.layer.borderWidth = 1
+        ModifyContent.layer.borderColor = UIColor.systemGray6.cgColor
         
     }
 }

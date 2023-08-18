@@ -13,4 +13,11 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+    }
+
 }

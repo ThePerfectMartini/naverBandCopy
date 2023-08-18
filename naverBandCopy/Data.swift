@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 var profileList:[profile] = [
     profile(name:"홍길동",introduce:"나는 의적이오~"),
     profile(name:"백운도사",introduce:"홍길동 스승이올시다")

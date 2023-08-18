@@ -3,7 +3,7 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmT-Y1-t4p">
-                                <rect key="frame" x="361" y="79" width="54" height="35"/>
+                                <rect key="frame" x="361" y="89" width="54" height="35"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -107,13 +107,24 @@
                                 <rect key="frame" x="0.0" y="471" width="430" height="378"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2023-08-16-13-19-06" translatesAutoresizingMaskIntoConstraints="NO" id="OQI-Eo-HsA">
-                                <rect key="frame" x="15" y="80" width="100" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UB9-vw-9JV">
+                                <rect key="frame" x="0.0" y="45" width="430" height="49"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-08-14 오후 4.37.18" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-Ht-Msk">
+                                        <rect key="frame" x="5" y="4.6666666666666643" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Hrc-x7-yVQ"/>
+                                            <constraint firstAttribute="width" constant="100" id="q5G-Yr-MCf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1031767651" green="0.80297672750000004" blue="0.12858635190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="8Zi-Bj-ktI"/>
-                                    <constraint firstAttribute="height" constant="40" id="mIP-Mb-qCh"/>
+                                    <constraint firstItem="l4D-Ht-Msk" firstAttribute="leading" secondItem="UB9-vw-9JV" secondAttribute="leading" constant="5" id="AlL-CU-rV5"/>
+                                    <constraint firstItem="l4D-Ht-Msk" firstAttribute="centerY" secondItem="UB9-vw-9JV" secondAttribute="centerY" id="D8r-nJ-PYv"/>
+                                    <constraint firstAttribute="height" constant="49" id="qg7-Do-TdA"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,16 +134,16 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7rz-8a-dh6" secondAttribute="bottom" id="4Wy-CP-2t3"/>
                             <constraint firstItem="kOv-mh-5Z8" firstAttribute="leading" secondItem="fyE-g9-RUO" secondAttribute="trailing" constant="20" id="54Y-2c-ohZ"/>
                             <constraint firstItem="kOv-mh-5Z8" firstAttribute="top" secondItem="7pG-1e-VXc" secondAttribute="bottom" constant="15" id="6ln-4s-BzJ"/>
+                            <constraint firstItem="UB9-vw-9JV" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="45" id="7EU-1z-uzK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ENF-zJ-gAF" secondAttribute="trailing" constant="15" id="Axd-ic-Y3e"/>
                             <constraint firstItem="7rz-8a-dh6" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Bb4-5s-Ygd"/>
                             <constraint firstItem="ENF-zJ-gAF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="G7v-Kd-1kq"/>
                             <constraint firstItem="Cjo-GT-qNj" firstAttribute="top" secondItem="ENF-zJ-gAF" secondAttribute="bottom" constant="80" id="KEY-PJ-uYm"/>
-                            <constraint firstItem="OQI-Eo-HsA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="POL-vU-XBU"/>
-                            <constraint firstItem="OQI-Eo-HsA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="QGw-hz-jOW"/>
                             <constraint firstItem="fyE-g9-RUO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="Rqd-5V-OWO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UB9-vw-9JV" secondAttribute="trailing" id="RtL-PA-ySg"/>
                             <constraint firstItem="7pG-1e-VXc" firstAttribute="leading" secondItem="fyE-g9-RUO" secondAttribute="trailing" constant="20" id="Vvg-uD-mtY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fpO-3g-CcE" secondAttribute="trailing" constant="20" id="YxI-Ln-Uct"/>
-                            <constraint firstItem="dmT-Y1-t4p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ZkK-qO-yh8"/>
+                            <constraint firstItem="dmT-Y1-t4p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="ZkK-qO-yh8"/>
                             <constraint firstItem="fpO-3g-CcE" firstAttribute="top" secondItem="Rtm-ou-KjF" secondAttribute="bottom" constant="15" id="a8C-SM-ap3"/>
                             <constraint firstItem="fyE-g9-RUO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="bID-HM-m8s"/>
                             <constraint firstItem="Cjo-GT-qNj" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="70" id="ckd-b8-0s9"/>
@@ -144,6 +155,7 @@
                             <constraint firstItem="7rz-8a-dh6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jPD-ag-5h1"/>
                             <constraint firstItem="Rtm-ou-KjF" firstAttribute="leading" secondItem="fyE-g9-RUO" secondAttribute="trailing" constant="20" id="kQn-Hj-37t"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cjo-GT-qNj" secondAttribute="trailing" constant="15" id="sWs-h1-Udk"/>
+                            <constraint firstItem="UB9-vw-9JV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ybP-Zo-QrM"/>
                             <constraint firstItem="ENF-zJ-gAF" firstAttribute="top" secondItem="fyE-g9-RUO" secondAttribute="bottom" constant="60" id="yga-rW-wUa"/>
                             <constraint firstItem="Cbw-Lx-gTf" firstAttribute="top" secondItem="ENF-zJ-gAF" secondAttribute="bottom" constant="70" id="yqd-ed-fMC"/>
                         </constraints>
@@ -188,7 +200,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyg-Vn-Kfm">
-                                        <rect key="frame" x="0.0" y="-59" width="430" height="932"/>
+                                        <rect key="frame" x="0.0" y="71" width="430" height="932"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sN2-z8-SLM">
                                                 <rect key="frame" x="115" y="120" width="200" height="200"/>
@@ -315,6 +327,7 @@
     <resources>
         <image name="KakaoTalk_Photo_2023-08-16-13-19-06" width="218" height="102"/>
         <image name="_ (3)" width="736" height="1291"/>
+        <image name="스크린샷 2023-08-14 오후 4.37.18" width="514" height="230"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

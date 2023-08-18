@@ -19,7 +19,11 @@ class DetailPageViewController: UIViewController{
     @IBOutlet weak var DetailTitle: UILabel!
     @IBOutlet weak var Writer: UILabel!
     @IBOutlet weak var DetailContent: UILabel!
-    @IBOutlet weak var TextTitle: UITextField!
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var writerView: UIView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let index = index else {return}
@@ -27,12 +31,16 @@ class DetailPageViewController: UIViewController{
         DetailTitle.text = postList[index].title           //데이터
         Writer.text = postList[index].writer
         DetailContent.text = postList[index].content
-        TextTitle.text = "댓글작성 미구현"
-                
-        designConfig()
+         
         
+        setupButton(EditButton)
+        setupView(titleView)
+        setupView(writerView)
+        setupView(contentView)
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.systemGray6.cgColor
         
-        
+       // designConfig()
         
         
     }
@@ -59,22 +67,23 @@ class DetailPageViewController: UIViewController{
     
     
     
-    private func designConfig(){
-        DetailTitle.backgroundColor = backgroundcolor        //뒷배경색
-        Writer.backgroundColor = backgroundcolor
-        DetailContent.backgroundColor = backgroundcolor
-        TextTitle.backgroundColor = backgroundcolor
+    //private func designConfig(){
+//        DetailTitle.backgroundColor = backgroundcolor        //뒷배경색
+//        Writer.backgroundColor = backgroundcolor
+//        DetailContent.backgroundColor = backgroundcolor
+//        TextTitle.backgroundColor = backgroundcolor
         
         
         
-        DetailTitle.layer.borderColor = UIColor.black.cgColor     //라벨 테두리
-        DetailTitle.layer.borderWidth = 1
-        Writer.layer.borderColor = UIColor.black.cgColor
-        Writer.layer.borderWidth = 1
-        DetailContent.layer.borderColor = UIColor.black.cgColor
-        DetailContent.layer.borderWidth = 1
+//        DetailTitle.layer.borderColor = UIColor.black.cgColor     //라벨 테두리
+//        DetailTitle.layer.borderWidth = 1
+//        Writer.layer.borderColor = UIColor.black.cgColor
+//        Writer.layer.borderWidth = 1
+//        DetailContent.layer.borderColor = UIColor.black.cgColor
+//        DetailContent.layer.borderWidth = 1
 
-    }
+    
+    
 }
 
 
