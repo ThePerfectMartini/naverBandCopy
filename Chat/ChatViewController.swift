@@ -20,6 +20,7 @@ class ChatViewController: UIViewController {
         chatTableView.dataSource = self
         chatTableView.delegate = self
         
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

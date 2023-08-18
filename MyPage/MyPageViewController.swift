@@ -31,6 +31,7 @@ class MyPageViewController: UIViewController {
         setupView(nicknameView)
         setupView(introductionView)
         
+        tableView.delegate = self
         tableView.dataSource = self
         // 테이블뷰에 xib파일 등록
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -38,6 +39,12 @@ class MyPageViewController: UIViewController {
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        userNickname.text = profileList["의적"]?.name
+        userIntroduction.text = profileList["의적"]?.introduce
+        
+    }
     
     @IBAction func editProfileButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "myToEditMy", sender: self)
@@ -52,6 +59,13 @@ class MyPageViewController: UIViewController {
                 secondVC.nickname = userNickname.text
                 secondVC.introduction = userIntroduction.text
             }
+        }
+        if segue.identifier == "toDetail" {
+            guard let vc = segue.destination as? DetailPageViewController,
+                  let cellData = sender as? postContent else {return}
+            vc.titleString = cellData.title
+            vc.contentString = cellData.content
+            vc.writerString = cellData.writer
         }
     }
     
@@ -84,6 +98,10 @@ func setupButton(_ button: UIButton){
 
 
 // MARK: -UITableViewDataSource
+extension MyPageViewController: UITableViewDelegate {
+    
+}
+
 
 extension MyPageViewController: UITableViewDataSource {
 
@@ -93,10 +111,14 @@ extension MyPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
-        cell.postTitle.text = posts[indexPath.row].title
-        cell.postContent.text = posts[indexPath.row].content
+        cell.postTitle.text = postList[indexPath.row].title
+        cell.postContent.text = postList[indexPath.row].content
         // cell.postImage.image =
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetail", sender: postList[indexPath.row])
     }
     
 }

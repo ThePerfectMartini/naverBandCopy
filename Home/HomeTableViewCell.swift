@@ -1,19 +1,17 @@
 //
-//  ChatDetailCell.swift
+//  TableViewCell.swift
 //  naverBandCopy
 //
-//  Created by t2023-m0078 on 2023/08/14.
+//  Created by t2023-m0078 on 2023/08/17.
 //
 
 import UIKit
 
-class ChatDetailCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var chatContent: LabelDesign!
-    @IBOutlet weak var chatContentRight: LabelDesign!
-    
-    @IBOutlet weak var chatPerson: UILabel!
-    
+    @IBOutlet weak var homeTitle: UILabel!
+    @IBOutlet weak var homeContent: UILabel!
+    @IBOutlet weak var writer: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

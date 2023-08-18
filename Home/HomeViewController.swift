@@ -30,8 +30,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
-   
     }
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            guard let vc = segue.destination as? DetailPageViewController,
+                  let cellData = sender as? postContent else {return}
+            vc.titleString = cellData.title
+            vc.contentString = cellData.content
+            vc.writerString = cellData.writer
+        }
+    }
+    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -53,3 +64,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 
+extension HomeViewController: UITableViewDelegate{
+    
+    
+}
+
+extension HomeViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as! HomeTableViewCell
+        cell.homeTitle.text = postList[indexPath.row].title
+        cell.homeContent.text = postList[indexPath.row].content
+        cell.writer.text = postList[indexPath.row].writer
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetail", sender: postList[indexPath.row])
+    }
+    
+    
+}
