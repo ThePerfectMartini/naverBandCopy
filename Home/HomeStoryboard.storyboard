@@ -144,13 +144,10 @@
                             <constraint firstAttribute="trailing" secondItem="FZc-UK-sDt" secondAttribute="trailing" id="MfA-O6-MOB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jxq-MP-vjP" secondAttribute="trailing" constant="5" id="NUn-OW-NFt"/>
                             <constraint firstItem="gnM-3j-otV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="QDD-GV-Mh1"/>
-                            <constraint firstItem="HTK-jz-D2R" firstAttribute="top" secondItem="gnM-3j-otV" secondAttribute="bottom" id="VQR-Wj-nUv"/>
                             <constraint firstItem="jxq-MP-vjP" firstAttribute="top" secondItem="FZc-UK-sDt" secondAttribute="bottom" constant="10" id="X9c-Zx-kmb"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HTK-jz-D2R" secondAttribute="bottom" id="f6a-mZ-etr"/>
                             <constraint firstItem="FZc-UK-sDt" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jwp-Ly-EWW"/>
                             <constraint firstItem="ByS-FP-U6F" firstAttribute="top" secondItem="gnM-3j-otV" secondAttribute="bottom" id="o4f-U1-FM8"/>
                             <constraint firstItem="FZc-UK-sDt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="45" id="vx5-IB-1Gk"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HTK-jz-D2R" secondAttribute="trailing" id="y9R-8D-UCN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -159,11 +156,22 @@
                         <outlet property="search" destination="jxq-MP-vjP" id="hLr-4m-YjI"/>
                         <outlet property="searchBar" destination="gnM-3j-otV" id="diT-01-Vrf"/>
                         <outlet property="table" destination="ByS-FP-U6F" id="NfN-v4-5rY"/>
+                        <segue destination="3Ux-58-hR5" kind="show" identifier="toDetail" id="KXx-Pq-jv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+        <!--DetailPage-->
+        <scene sceneID="4dT-lm-u06">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailPageStoryboard" referencedIdentifier="DetailPage" id="3Ux-58-hR5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Ke-Qf-Gbh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHp-DH-rk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="-89"/>
         </scene>
     </scenes>
     <resources>

@@ -63,6 +63,7 @@ class ChatDetailController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        chatTableView.reloadData()
     }
     
     
@@ -93,7 +94,7 @@ extension ChatDetailController: UITableViewDataSource{
         cell.chatContent.text = chatRoomList[chatIndex].chatList[indexPath.row][1]
         cell.chatContentRight.text = chatRoomList[chatIndex].chatList[indexPath.row][1]
         if chatRoomList[chatIndex].chatList[indexPath.row][0] == "0" {
-            cell.chatPerson.text = chatRoomList[chatIndex].me
+            cell.chatPerson.text = profileList[0].name
             cell.chatPerson.textAlignment = .right
             cell.chatContent.isHidden = true
             cell.chatContentRight.isHidden = false

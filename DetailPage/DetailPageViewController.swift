@@ -2,12 +2,19 @@ import UIKit
 
 class DetailPageViewController: UIViewController{
     
+    
+    var index:Int?
     var titleString:String?
     var contentString:String?
     var writerString:String?
     
 
+    @IBAction func editButtonClick(_ sender: Any) {
+        performSegue(withIdentifier: "toEdit", sender: index)
+        
+    }
     let backgroundcolor = UIColor(red:255/255.0, green:255/255.0, blue:255/255.0, alpha: 1.0)
+    @IBOutlet var allView: UIView!
     @IBOutlet weak var EditButton: UIButton!
     @IBOutlet weak var DetailTitle: UILabel!
     @IBOutlet weak var Writer: UILabel!
@@ -15,13 +22,13 @@ class DetailPageViewController: UIViewController{
     @IBOutlet weak var TextTitle: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DetailTitle.text = titleString           //데이터
-        Writer.text = writerString
-        DetailContent.text = contentString
+        guard let index = index else {return}
+
+        DetailTitle.text = postList[index].title           //데이터
+        Writer.text = postList[index].writer
+        DetailContent.text = postList[index].content
         TextTitle.text = "댓글작성 미구현"
-        
-        
-        
+                
         designConfig()
         
         
@@ -31,13 +38,22 @@ class DetailPageViewController: UIViewController{
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        guard let index = index else {return}
+
+        DetailTitle.text = postList[index].title
+        Writer.text = postList[index].writer
+        DetailContent.text = postList[index].content
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailEdit" {
-            guard let vc = segue.destination as? DetailPageViewController,
-                  let cellData = sender as? postContent else {return}
-            vc.titleString = cellData.title
-            vc.contentString = cellData.content
-            vc.writerString = cellData.writer
+        if segue.identifier == "toEdit" {
+            guard let vc = segue.destination as? ModifyPageViewController,
+                  let index = sender as? Int else {return}
+            vc.titleString = postList[index].title
+            vc.contentString = postList[index].content
+            vc.writerString = postList[index].writer
+            vc.index = index
         }
     }
     

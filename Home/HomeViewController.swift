@@ -1,7 +1,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var search: UIButton!
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var newJoin: UIButton!
@@ -35,26 +35,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             guard let vc = segue.destination as? DetailPageViewController,
-                  let cellData = sender as? postContent else {return}
-            vc.titleString = cellData.title
-            vc.contentString = cellData.content
-            vc.writerString = cellData.writer
+                  let index = sender as? Int else {return}
+            vc.index = index
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        table.reloadData()
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return postList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sunset = data[indexPath.row]
+//        let sunset = data[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        cell.label.text = sunset.title
-        cell.label2.text = sunset.middle
-        cell.label3.text = sunset.writer
-        cell.iconImageView.image = UIImage(named: sunset.imageName)
+        cell.label.text = postList[indexPath.row].title
+        cell.label2.text = postList[indexPath.row].content
+        cell.label3.text = postList[indexPath.row].writer
+//        cell.iconImageView.image = UIImage(named: sunset.imageName)
         return cell
 
     }
@@ -62,31 +63,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-}
-
-extension HomeViewController: UITableViewDelegate{
     
     
-}
-
-extension HomeViewController:UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as! HomeTableViewCell
-        cell.homeTitle.text = postList[indexPath.row].title
-        cell.homeContent.text = postList[indexPath.row].content
-        cell.writer.text = postList[indexPath.row].writer
-        
-        return cell
-        
-    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetail", sender: postList[indexPath.row])
+        performSegue(withIdentifier: "toDetail", sender: indexPath.row)
     }
-    
-    
 }
+
+
+
+

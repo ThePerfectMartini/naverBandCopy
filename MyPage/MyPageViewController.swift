@@ -41,9 +41,9 @@ class MyPageViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        userNickname.text = profileList["의적"]?.name
-        userIntroduction.text = profileList["의적"]?.introduce
-        
+        userNickname.text = profileList[0].name
+        userIntroduction.text = profileList[0].introduce
+        tableView.reloadData()
     }
     
     @IBAction func editProfileButtonPressed(_ sender: UIButton) {
@@ -62,12 +62,11 @@ class MyPageViewController: UIViewController {
         }
         if segue.identifier == "toDetail" {
             guard let vc = segue.destination as? DetailPageViewController,
-                  let cellData = sender as? postContent else {return}
-            vc.titleString = cellData.title
-            vc.contentString = cellData.content
-            vc.writerString = cellData.writer
+                  let index = sender as? Int else {return}
+            vc.index = index
         }
     }
+    
     
 }
 
@@ -118,7 +117,7 @@ extension MyPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetail", sender: postList[indexPath.row])
+        performSegue(withIdentifier: "toDetail", sender: indexPath.row)
     }
     
 }

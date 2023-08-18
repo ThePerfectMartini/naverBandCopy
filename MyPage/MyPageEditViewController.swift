@@ -59,11 +59,11 @@ class MyPageEditViewController: UIViewController {
         }
         if let nickname = nickname {
             firstVC?.userNickname.text = nickname
-            profileList["의적"]?.name = nickname
+            profileList[0].name = nickname
         }
         if let introduction = introduction {
             firstVC?.userIntroduction.text = introduction
-            profileList["의적"]?.introduce = introduction
+            profileList[0].introduce = introduction
         }
     }
     
