@@ -9,7 +9,8 @@ import UIKit
 
 class ChatDetailCell: UITableViewCell {
 
-    @IBOutlet weak var chatContent: UILabel!
+    @IBOutlet weak var chatContent: LabelDesign!
+    @IBOutlet weak var chatContentRight: LabelDesign!
     
     @IBOutlet weak var chatPerson: UILabel!
     

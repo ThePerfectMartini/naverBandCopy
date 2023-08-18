@@ -20,6 +20,7 @@ class ChatViewController: UIViewController {
         chatTableView.dataSource = self
         chatTableView.delegate = self
         
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +50,4 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDetail", sender: nil)
     }
-    
-    
 }
