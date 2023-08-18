@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,14 +33,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbJ-bA-BNr">
                                 <rect key="frame" x="160" y="0.0" width="377" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEU-rI-7Tk">
-                                        <rect key="frame" x="10.000000000000002" y="4.6666666666666643" width="29.666666666666671" height="20.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EEU-rI-7Tk">
+                                        <rect key="frame" x="10.000000000000002" y="9.9999999999999982" width="29.666666666666671" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-Ve-mfd">
-                                        <rect key="frame" x="10.000000000000002" y="65" width="29.666666666666671" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-Ve-mfd">
+                                        <rect key="frame" x="10.000000000000002" y="50.333333333333336" width="29.666666666666671" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,17 +48,23 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EEU-rI-7Tk" secondAttribute="trailing" constant="10" id="1za-l8-22k"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ecE-Ve-mfd" secondAttribute="trailing" constant="10" id="K45-xw-9eE"/>
                                     <constraint firstItem="ecE-Ve-mfd" firstAttribute="leading" secondItem="CbJ-bA-BNr" secondAttribute="leading" constant="10" id="O2N-iH-jz8"/>
                                     <constraint firstItem="EEU-rI-7Tk" firstAttribute="leading" secondItem="CbJ-bA-BNr" secondAttribute="leading" constant="10" id="PFT-sy-X1b"/>
-                                    <constraint firstItem="ecE-Ve-mfd" firstAttribute="top" secondItem="EEU-rI-7Tk" secondAttribute="bottom" constant="40" id="hAq-fC-tbG"/>
-                                    <constraint firstItem="ecE-Ve-mfd" firstAttribute="centerY" secondItem="CbJ-bA-BNr" secondAttribute="centerY" id="yMM-UK-nhR"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ecE-Ve-mfd" secondAttribute="bottom" constant="20" id="XXy-CO-jMf"/>
+                                    <constraint firstItem="EEU-rI-7Tk" firstAttribute="top" secondItem="CbJ-bA-BNr" secondAttribute="top" constant="10" id="aX6-G5-atj"/>
+                                    <constraint firstItem="ecE-Ve-mfd" firstAttribute="top" secondItem="EEU-rI-7Tk" secondAttribute="bottom" constant="20" id="hAq-fC-tbG"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="CbJ-bA-BNr" firstAttribute="top" secondItem="r8W-Qa-b5n" secondAttribute="top" id="9J4-TM-bfX"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="uPb-Zz-0kv" secondAttribute="bottom" priority="999" constant="10" id="5Yb-wW-eJh"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uPb-Zz-0kv" secondAttribute="bottom" priority="999" constant="10" id="5Yb-wW-eJh"/>
                     <constraint firstAttribute="trailing" secondItem="uPb-Zz-0kv" secondAttribute="trailing" constant="10" id="Hqo-fQ-2xJ"/>
                     <constraint firstItem="uPb-Zz-0kv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Usg-NU-wPW"/>
                     <constraint firstItem="uPb-Zz-0kv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="p0y-qM-YNj"/>

@@ -48,6 +48,7 @@ extension HomeViewController:UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as! HomeTableViewCell
         cell.homeTitle.text = postList[indexPath.row].title
         cell.homeContent.text = postList[indexPath.row].content
+        cell.writer.text = postList[indexPath.row].writer
         
         return cell
         

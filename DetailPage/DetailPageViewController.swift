@@ -31,6 +31,15 @@ class DetailPageViewController: UIViewController{
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailEdit" {
+            guard let vc = segue.destination as? DetailPageViewController,
+                  let cellData = sender as? postContent else {return}
+            vc.titleString = cellData.title
+            vc.contentString = cellData.content
+            vc.writerString = cellData.writer
+        }
+    }
     
     
     

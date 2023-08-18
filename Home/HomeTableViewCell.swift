@@ -11,6 +11,7 @@ class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var homeTitle: UILabel!
     @IBOutlet weak var homeContent: UILabel!
+    @IBOutlet weak var writer: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
