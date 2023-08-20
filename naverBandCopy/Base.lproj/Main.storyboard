@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gM-ba-8mt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4295" y="-163"/>
+            <point key="canvasLocation" x="-4302" y="-163"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oID-co-sVP">
@@ -30,12 +30,12 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="f4l-jS-Ohz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIV-w7-ip7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="cq8-uR-9nb" kind="relationship" relationship="viewControllers" id="3FL-rr-XYC"/>
-                        <segue destination="4b6-Sm-15c" kind="relationship" relationship="viewControllers" id="kxg-1t-XS0"/>
                         <segue destination="tIU-k2-q1k" kind="relationship" relationship="viewControllers" id="lnZ-KD-iq4"/>
                         <segue destination="fnw-cM-mrI" kind="relationship" relationship="viewControllers" id="Ns7-vy-Iij"/>
                     </connections>
@@ -52,17 +52,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnm-d0-nH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2548" y="-246"/>
-        </scene>
-        <!--DetailPage-->
-        <scene sceneID="J77-LF-tc2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DetailPageStoryboard" referencedIdentifier="DetailPage" id="4b6-Sm-15c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="I8O-zD-krL"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SAi-IU-2iw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2534" y="-181"/>
+            <point key="canvasLocation" x="-2557" y="-163"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="Ldb-ik-drd">
@@ -72,7 +62,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dd2-BY-aDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2548" y="-108"/>
+            <point key="canvasLocation" x="-2548" y="-301"/>
         </scene>
         <!--Chat-->
         <scene sceneID="jtX-97-sdR">
