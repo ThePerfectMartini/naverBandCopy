@@ -3,7 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -122,18 +122,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oV-bu-7qP">
+                                <rect key="frame" x="359.66666666666669" y="681" width="34.333333333333314" height="35"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="newPostAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1GR-pC-Bhp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ByS-FP-U6F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1k7-bp-kKX"/>
                             <constraint firstItem="gnM-3j-otV" firstAttribute="top" secondItem="FZc-UK-sDt" secondAttribute="top" constant="48.666666666666686" id="2Ld-kA-HC9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9oV-bu-7qP" secondAttribute="bottom" constant="20" id="2jj-jn-UHk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ByS-FP-U6F" secondAttribute="bottom" id="3Ex-ay-gyI"/>
                             <constraint firstItem="ByS-FP-U6F" firstAttribute="top" secondItem="gnM-3j-otV" secondAttribute="bottom" id="68S-X7-P7d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ByS-FP-U6F" secondAttribute="trailing" id="HGQ-eE-2c2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gnM-3j-otV" secondAttribute="trailing" constant="5" id="Lw0-T7-V4z"/>
                             <constraint firstAttribute="trailing" secondItem="FZc-UK-sDt" secondAttribute="trailing" id="MfA-O6-MOB"/>
                             <constraint firstItem="gnM-3j-otV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="QDD-GV-Mh1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9oV-bu-7qP" secondAttribute="trailing" constant="20" id="Slq-GU-8Pc"/>
                             <constraint firstItem="FZc-UK-sDt" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jwp-Ly-EWW"/>
                             <constraint firstItem="FZc-UK-sDt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="45" id="vx5-IB-1Gk"/>
                         </constraints>
@@ -144,6 +157,7 @@
                         <outlet property="searchBar" destination="gnM-3j-otV" id="diT-01-Vrf"/>
                         <outlet property="table" destination="ByS-FP-U6F" id="NfN-v4-5rY"/>
                         <segue destination="3Ux-58-hR5" kind="show" identifier="toDetail" id="KXx-Pq-jv1"/>
+                        <segue destination="ONr-Vx-CJe" kind="show" identifier="homeToEdit" id="jaU-ES-YXg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -160,6 +174,16 @@
             </objects>
             <point key="canvasLocation" x="665" y="-89"/>
         </scene>
+        <!--ModifyPage-->
+        <scene sceneID="0ZP-XV-Ugt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailPageStoryboard" referencedIdentifier="ModifyPage" id="ONr-Vx-CJe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="y8Q-mI-uxt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDs-MI-O4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="88"/>
+        </scene>
     </scenes>
     <resources>
         <image name="스크린샷 2023-08-14 오후 4.37.18" width="514" height="230"/>
@@ -168,6 +192,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

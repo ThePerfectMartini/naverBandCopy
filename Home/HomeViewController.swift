@@ -9,6 +9,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var isFiltering: Bool = false
     var filteredArr: [postContent] = []
     
+    @IBAction func newPostAction(_ sender: Any) {
+        let tempPost = postContent(title:"빈 제목",content:"빈 내용",writer:profileList[0].name)
+        postList.append(tempPost)
+        performSegue(withIdentifier: "homeToEdit", sender: postList.count - 1)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,13 +21,20 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         table.delegate = self
         self.searchBar.delegate = self
         self.searchBar.showsCancelButton = false
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             guard let vc = segue.destination as? DetailPageViewController,
                   let index = sender as? Int else {return}
+            vc.index = index
+        }
+        if segue.identifier == "homeToEdit" {
+            guard let vc = segue.destination as? ModifyPageViewController,
+                  let index = sender as? Int else {return}
+            vc.titleString = ""
+            vc.contentString = ""
+            vc.writerString = profileList[0].name
             vc.index = index
         }
     }
@@ -87,5 +99,4 @@ extension HomeViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         table.reloadData()
     }
-    
 }
